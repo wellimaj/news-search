@@ -1,0 +1,1 @@
+export const newsEndpoint = "https://newsapi.org/v2/everything"; 
