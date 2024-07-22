@@ -1,6 +1,5 @@
 import express, { Request, Response } from "express";
 import { AuthMiddleware } from "../middleware/auth.middleware";
-import { db } from "../server";
 import { NewsService } from "../services/news.service";
 export class ProtectedController {
   public path = "/protected";

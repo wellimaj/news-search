@@ -27,9 +27,11 @@ export class NewsService {
   }
   async summarize(url) {
     const model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-    console.log(url)
+    console.log(url);
     const prompt = `Please summarize the key points of the news article found at ${url}. Focus on the main events, any important figures involved, and the overall impact of the story.`;
-    const result = await model.generateContent(prompt);
+    const result: any = await model
+      .generateContent(prompt)
+      .catch((e) => console.log(e));
     const response = result.response;
     const text = response.text();
     return text;

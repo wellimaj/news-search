@@ -21,18 +21,18 @@ const app = new App({
   ],
 });
 app.listen();
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
-// Replace 'my-database-name' with your actual database name
-const dbURI = "mongodb://127.0.0.1:27017/test";
+// // Replace 'my-database-name' with your actual database name
+// const dbURI = "mongodb://127.0.0.1:27017/test";
 
-mongoose.connect(dbURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// mongoose.connect(dbURI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
-export const db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
-db.once("open", () => {
-  console.log("Connected to MongoDB");
-});
+// export const db = mongoose.connection;
+// db.on("error", console.error.bind(console, "MongoDB connection error:"));
+// db.once("open", () => {
+//   console.log("Connected to MongoDB");
+// });
